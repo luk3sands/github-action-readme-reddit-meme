@@ -1,5 +1,5 @@
 author: Luke Sands <luke.sands@d3code.com.au>
-name: Git Commit
+name: Commit Workflow Changes
 description: 'Commit changes made in a workflow to the repository'
 
 inputs:
@@ -21,3 +21,7 @@ runs:
       shell: bash
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
+
+branding:
+  icon: 'git-commit'
+  color: orange
