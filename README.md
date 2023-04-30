@@ -49,9 +49,9 @@ You can find this setting for your repository here:
 - Workflow permissions
 - Read and write workflow permissions
 
-![menu](images/menu.png | width=100)
+![menu](images/menu.png)
 
-![setting](images/setting.png | width=200)
+![setting](images/setting.png)
 
 
 ![Reddit](https://i.redd.it/gasrh7d2h1xa1.png)
