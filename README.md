@@ -10,7 +10,7 @@ Place an image with the description `![Reddit]` in your readme and the action wi
 
 Updates at 6am every day and on push to master
 
-```
+```yaml
 name: Reddit Meme
 
 on:
@@ -35,7 +35,7 @@ jobs:
 
 ### Example readme
 
-```
+```md
 # Luke Sands
 
 ![Reddit](https://i.redd.it/pjd1kckha2xa1.jpg)
