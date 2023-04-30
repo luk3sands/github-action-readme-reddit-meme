@@ -1,4 +1,4 @@
-package api
+package cmd
 
 type Reddit struct {
 	Kind string `json:"kind"`
