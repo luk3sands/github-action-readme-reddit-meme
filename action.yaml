@@ -9,12 +9,10 @@ branding:
 inputs:
   commit_author:
     description: "The author to use for the commit"
-    required: false
-    default: ""
+    required: true
   commit_email:
     description: "The email to use for the commit"
-    required: false
-    default: ""
+    required: true
 
 runs:
   using: "composite"
@@ -28,18 +26,6 @@ runs:
       shell: bash
     - run: |
         echo "${{ github.action_path }}" >> $GITHUB_PATH
-        ls -lah
       shell: bash
-    - run: |
-        ls -lah
-        go run main.go
-      shell: bash
-    - run: |
-        echo "${{ github.action_path }}" >> $GITHUB_PATH
-        ls -lah
-      shell: bash
-    - run: |
-        git add README.md
-        git commit -m "Updated README.md"
-        git push
+    - run: go run main.go
       shell: bash

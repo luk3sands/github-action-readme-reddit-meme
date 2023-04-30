@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/exec"
 	"strings"
 
 	"github.com/d3code/github-action-commit-workflow-changes/api"
@@ -12,7 +13,6 @@ func main() {
 	println("Finding some lols...")
 
 	reddit := api.GetReddit()
-
 	var imageUrl string
 
 	posts := reddit.Data.Children
@@ -37,6 +37,9 @@ func main() {
 
 	fmt.Println("Found image: ", imageUrl)
 
+	workspace := os.Getenv("GITHUB_WORKSPACE")
+	os.Chdir(workspace)
+
 	readme, err := os.ReadFile("README.md")
 	if err != nil {
 		panic(err.Error())
@@ -57,6 +60,10 @@ func main() {
 	if err != nil {
 		panic(err.Error())
 	}
+
+	exec.Command("git", "add", "README.md").Run()
+	exec.Command("git", "commit", "-m", "'Change README.md'").Run()
+	exec.Command("git", "push'").Run()
 
 	println("Done!")
 }
