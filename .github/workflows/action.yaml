@@ -11,5 +11,5 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
 
-    - name: Run My Go Action
-      uses: ./
+    # - name: Run My Go Action
+    #   uses: ./
