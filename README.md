@@ -38,7 +38,7 @@ jobs:
 ```md
 # Luke Sands
 
-![Reddit](https://i.redd.it/gasrh7d2h1xa1.png)
+![Reddit](https://i.redd.it/5izq2xc8j2xa1.jpg)
 ```
 
 ### Workflow permissions
