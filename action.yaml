@@ -7,10 +7,6 @@ branding:
   color: orange
 
 inputs:
-  commit_message:
-    description: "The commit message to use"
-    required: true
-    default: "Update workflow files"
   commit_author:
     description: "The author to use for the commit"
     required: false
