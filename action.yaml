@@ -1,22 +1,24 @@
-author: Luke Sands <luke.sands@d3code.com.au>
 name: Commit Workflow Changes
-description: 'Commit changes made in a workflow to the repository'
+description: "Commit changes made in a workflow to the repository"
+author: Luke Sands <luke.sands@d3code.com.au>
+
+branding:
+  icon: "git-commit"
+  color: orange
 
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  who-to-greet:
+    description: "Who to greet"
     required: true
-    default: 'World'
+    default: "World"
+
 outputs:
   random-number:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-number }}
+
 runs:
   using: "composite"
   steps:
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
-
-branding:
-  icon: 'git-commit'
-  color: orange
