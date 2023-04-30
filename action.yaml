@@ -28,9 +28,7 @@ runs:
         git config user.name "${{ inputs.commit_author }}"
         git config user.email "${{ inputs.commit_email }}"
       shell: bash
-    - run: |
-        go mod download
-        go run main.go
+    - run: go run main.go
       shell: bash
     - run: |
         git add README.md
