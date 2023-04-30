@@ -31,7 +31,8 @@ func main() {
 	}
 
 	if imageUrl == "" {
-		panic("No image found")
+		fmt.Println("No image found")
+		return
 	}
 
 	fmt.Println("Found image: ", imageUrl)
