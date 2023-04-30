@@ -12,3 +12,6 @@ jobs:
       uses: actions/checkout@v2
     - name: Run Action
       uses: ./
+      with:
+        commit_author: Luke Sands
+        commit_email: <luke.sands@d3code.com.au>
