@@ -1,5 +1,5 @@
-name: Commit Workflow Changes
-description: "Commit changes made in a workflow to the repository"
+name: README.md Reddit Meme
+description: "gets the latest post with an image from the /r/ProgrammerHumor subreddit and updates README.md"
 author: Luke Sands <luke.sands@d3code.com.au>
 
 branding:
