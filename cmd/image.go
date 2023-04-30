@@ -20,7 +20,7 @@ func SelectImage() string {
 			strings.HasSuffix(post.Data.Url, ".gif") ||
 			strings.HasSuffix(post.Data.Url, ".png")) &&
 			post.Data.Over18 == false &&
-			post.Data.UpvoteRatio > 0.9 &&
+			post.Data.UpvoteRatio > 0.8 &&
 			!ArrayContainsString(blocked, post.Data.Url) {
 
 			return post.Data.Url
