@@ -48,9 +48,7 @@ func main() {
 	}
 
 	// Commit the changes
-	if os.Getenv("GITHUB_ACTION") != "" {
-		cmd.CommitReadme()
-	}
+	cmd.CommitReadme()
 
 	println("Done!")
 }
