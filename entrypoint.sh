@@ -1,6 +1,4 @@
 #!/bin/sh -l
-GIT_NAME="GitHub Actions"
-GIT_EMAIL="github-actions[bot]@users.noreply.github.com"
 
 commit() {
   git add README.md
