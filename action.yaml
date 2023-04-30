@@ -6,14 +6,28 @@ branding:
   icon: "git-commit"
   color: orange
 
+inputs:
+  commit_message:
+    description: "The commit message to use"
+    required: true
+    default: "Update workflow files"
+  commit_author:
+    description: "The author to use for the commit"
+    required: false
+    default: ""
+  commit_email:
+    description: "The email to use for the commit"
+    required: false
+    default: ""
+
 runs:
   using: "composite"
   steps:
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
     - run: |
-        git config user.email "$(git log -1 --pretty=format:'%ae')"
-        git config user.name "$(git log -1 --pretty=format:'%an')"
+        git config user.name ${{ inputs.commit_author }}
+        git config user.email ${{ inputs.commit_email }}
       shell: bash
     - run: entrypoint.sh
       shell: bash
