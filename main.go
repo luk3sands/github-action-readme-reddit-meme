@@ -69,7 +69,7 @@ func main() {
 	cmdCommit.Stdout = os.Stdout
 	cmdCommit.Run()
 
-	cmdPush := exec.Command("git", "push'")
+	cmdPush := exec.Command("git", "push")
 	cmdPush.Stdout = os.Stdout
 	cmdPush.Run()
 
