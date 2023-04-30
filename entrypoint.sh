@@ -23,6 +23,7 @@ commit() {
 check_commit
 
 echo "\nUpdated README.md" >> README.md
+
 commit
 
 git status -s
