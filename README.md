@@ -58,4 +58,4 @@ jobs:
 
 This image will be updated from r/ProgrammerHumor
 
-![Reddit](https://i.redd.it/gasrh7d2h1xa1.png)
+![Reddit](https://i.redd.it/5izq2xc8j2xa1.jpg)
