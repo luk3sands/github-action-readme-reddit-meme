@@ -1,5 +1,8 @@
 FROM golang:1.17
 
-COPY entrypoint.sh /entrypoint.sh
+WORKDIR /app
+COPY entrypoint.sh entrypoint.sh
+RUN ls -la .
+RUN chmod +x entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
