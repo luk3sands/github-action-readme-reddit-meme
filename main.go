@@ -30,6 +30,8 @@ func main() {
 		}
 	}
 
+	fmt.Println("Found image: ", imageUrl)
+
 	readme, err := os.ReadFile("README.md")
 	if err != nil {
 		panic(err.Error())
