@@ -22,8 +22,8 @@ function check_commit() {
 
 function commit() {
 
-  git config --global user.name $GIT_NAME
-  git config --global user.email $GIT_EMAIL
+  git config --global user.name "$GIT_NAME"
+  git config --global user.email "$GIT_EMAIL"
 
   git add .
   git commit -m "Update README.md"
@@ -35,5 +35,5 @@ commit
 
 git status -s
 
-git config --global user.name "Luke Sands"
+git config --global user.name 'Luke Sands'
 git config --global user.email "luke.sands@d3code.com.au"
