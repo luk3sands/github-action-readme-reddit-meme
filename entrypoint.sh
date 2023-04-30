@@ -2,7 +2,7 @@
 
 set -e
 
-go get -v -t -d ./...
-go build -v
+go get -v -d ./...
+go build -v -o github-action-commit-workflow-changes
 
-./<your-program-name>
+./github-action-commit-workflow-changes
