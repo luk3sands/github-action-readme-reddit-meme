@@ -1,10 +1,16 @@
 package main
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 	println("Updating code")
 
-	file, _ := os.ReadFile("main.go")
-	println(string(file))
+	file, err := os.ReadFile("main.go")
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(string(file))
 }
