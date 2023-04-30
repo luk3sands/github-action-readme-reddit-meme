@@ -9,10 +9,12 @@ branding:
 inputs:
   commit_author:
     description: "The author to use for the commit"
-    required: true
+    required: false
+    default: "GitHub Actions Bot"
   commit_email:
     description: "The email to use for the commit"
-    required: true
+    required: false
+    default: "github-actions[bot]@users.noreply.github.com"
 
 runs:
   using: "composite"

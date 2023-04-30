@@ -12,6 +12,3 @@ jobs:
       uses: actions/checkout@v2
     - name: Run Action
       uses: ./
-      with:
-        commit_author: GitHub Actions
-        commit_email: <github-actions[bot]@users.noreply.github.com>

@@ -6,6 +6,13 @@ This action gets the latest post with an image from the `r/ProgrammerHumor` subr
 
 Place an image with the description `![Reddit]` in your readme and the action will replace it with the latest from the Reddit API and commit it to the branch the action was run on. Make sure you have `Read and write workflow permissions` for the repository you are running this action on.
 
+You can optionally change the commit author and email if you wish to. This will default to:
+```yaml
+  with:
+    commit_author: GitHub Actions
+    commit_email: github-actions[bot]@users.noreply.github.com
+```
+
 ### Example workflow
 
 Updates at 6am every day and on push to master
@@ -28,8 +35,8 @@ jobs:
       - name: Update Reddit
         uses: d3code/github-action-commit-workflow-changes@master
         with:
-          commit_author: GitHub Actions
-          commit_email: <github-actions[bot]@users.noreply.github.com>
+          commit_author: Luke Sands
+          commit_email: luke.sands@d3code.com.au
 
 ```
 
