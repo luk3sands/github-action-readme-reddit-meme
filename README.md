@@ -28,8 +28,8 @@ jobs:
       - name: Update Reddit
         uses: d3code/github-action-commit-workflow-changes@master
         with:
-          commit_author: "Luke Sands"
-          commit_email: "luke.sands@d3code.com.au"
+          commit_author: GitHub Actions
+          commit_email: <github-actions[bot]@users.noreply.github.com>
 
 ```
 
