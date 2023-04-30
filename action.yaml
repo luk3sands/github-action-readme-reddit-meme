@@ -32,3 +32,8 @@ runs:
         go mod download
         go run main.go
       shell: bash
+    - run: |
+        git add README.md
+        git commit -m "Updated README.md"
+        git push
+      shell: bash
