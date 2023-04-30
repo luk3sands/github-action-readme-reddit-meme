@@ -11,5 +11,9 @@ runs:
   steps:
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
+    - run: |
+        git config user.email "$(git log -1 --pretty=format:'%ae')"
+        git config user.name "$(git log -1 --pretty=format:'%an')"
+      shell: bash
     - run: entrypoint.sh
       shell: bash
