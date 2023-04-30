@@ -8,8 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code
+    - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Run My Go Action
+    - name: Run Action
       uses: ./

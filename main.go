@@ -1,5 +1,10 @@
 package main
 
+import "os"
+
 func main() {
-	println("Hello, World!")
+	println("Updating code")
+
+	file, _ := os.ReadFile("main.go")
+	println(string(file))
 }

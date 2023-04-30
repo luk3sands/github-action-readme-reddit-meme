@@ -1,8 +1,5 @@
 # Commit Workflow Changes
 
+<!-- #start:run -->
 
-Updated README.md
-
-Updated README.md
-
-Updated README.md
+<!-- #end:run -->
