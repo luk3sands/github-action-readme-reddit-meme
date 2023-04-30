@@ -78,7 +78,7 @@ func main() {
 		return
 	}
 
-	cmdCommit := exec.Command("git", "commit", "-m", "'Change README.md'")
+	cmdCommit := exec.Command("git", "commit", "-m", "Change README.md")
 	cmdCommit.Stdout = os.Stdout
 	cmdCommit.Run()
 
