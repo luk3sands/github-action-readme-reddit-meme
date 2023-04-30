@@ -15,15 +15,23 @@ func main() {
 	reddit := api.GetReddit()
 	var imageUrl string
 
+	block, err := os.ReadFile(".github/_state/block.txt")
+	if err != nil {
+		panic(err.Error())
+	}
+
+	blocked := strings.Split(string(block), "\n")
+
 	posts := reddit.Data.Children
 	for _, post := range posts {
 
 		fmt.Println(post.Data.Title)
 		fmt.Println(post.Data.Url)
 
-		if strings.HasSuffix(post.Data.Url, ".jpg") ||
+		if (strings.HasSuffix(post.Data.Url, ".jpg") ||
 			strings.HasSuffix(post.Data.Url, ".gif") ||
-			strings.HasSuffix(post.Data.Url, ".png") {
+			strings.HasSuffix(post.Data.Url, ".png")) &&
+			!ArrayContainsString(blocked, post.Data.Url) {
 
 			imageUrl = post.Data.Url
 			break
@@ -38,7 +46,9 @@ func main() {
 	fmt.Println("Found image: ", imageUrl)
 
 	workspace := os.Getenv("GITHUB_WORKSPACE")
-	os.Chdir(workspace)
+	if workspace != "" {
+		os.Chdir(workspace)
+	}
 
 	readme, err := os.ReadFile("README.md")
 	if err != nil {
@@ -62,8 +72,11 @@ func main() {
 	}
 
 	cmdAdd := exec.Command("git", "add", "README.md")
-	cmdAdd.Stdout = os.Stdout
-	cmdAdd.Run()
+	_, err = cmdAdd.Output()
+	if err != nil {
+		fmt.Println("Error adding to git: ", err.Error())
+		return
+	}
 
 	cmdCommit := exec.Command("git", "commit", "-m", "'Change README.md'")
 	cmdCommit.Stdout = os.Stdout
@@ -74,4 +87,13 @@ func main() {
 	cmdPush.Run()
 
 	println("Done!")
+}
+
+func ArrayContainsString(array []string, findString string) bool {
+	for _, a := range array {
+		if a == findString {
+			return true
+		}
+	}
+	return false
 }
