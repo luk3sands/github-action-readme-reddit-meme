@@ -61,9 +61,17 @@ func main() {
 		panic(err.Error())
 	}
 
-	exec.Command("git", "add", "README.md").Run()
-	exec.Command("git", "commit", "-m", "'Change README.md'").Run()
-	exec.Command("git", "push'").Run()
+	cmdAdd := exec.Command("git", "add", "README.md")
+	cmdAdd.Stdout = os.Stdout
+	cmdAdd.Run()
+
+	cmdCommit := exec.Command("git", "commit", "-m", "'Change README.md'")
+	cmdCommit.Stdout = os.Stdout
+	cmdCommit.Run()
+
+	cmdPush := exec.Command("git", "push'")
+	cmdPush.Stdout = os.Stdout
+	cmdPush.Run()
 
 	println("Done!")
 }
