@@ -1,6 +1,6 @@
 # README.md Reddit Meme
 
-![example workflow](https://github.com/d3code/github-action-commit-workflow-changes/actions/workflows/action.yaml/badge.svg)
+[//]: # (![workflow]&#40;https://github.com/d3code/github-action-commit-workflow-changes/actions/workflows/action.yaml/badge.svg&#41;)
 
 This action gets the latest post with an image from the `r/ProgrammerHumor` subreddit and updates your `README.md`
 
