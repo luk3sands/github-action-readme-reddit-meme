@@ -5,60 +5,50 @@
 # Operating system files
 .DS_Store
 
-# Go (https://golang.org)
-# Compiled binary file
+# Go
+go.work
+go.work.sum
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-go.work
-go.work.sum
-
-# Java (https://www.java.com)
-# Compiled class file
+# Java
 *.class
-
-# Maven (https://maven.apache.org)
-# Compiled class file
 target/
-
-# Gradle (https://gradle.org)
-# Temporary build directory
 .gradle/
 
-# Docker (https://www.docker.com)
-# Local .env files
+# Docker
 .env.local
 .env.*.local
 
-# Terraform (https://www.terraform.io)
-# State should never be committed to a git repository, and so *.tfstate is ignored.
-**/.terraform/
-**/.terraform.lock.hcl
-**/terraform.tfvars
-**/terraform.tfstate
-**/terraform.tfstate.backup
+# Terraform
+# State should never be committed to a git repository, and so *.tfstate is ignored
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+*.tfstate
+*.tfstate.backup
 
-# Python (https://www.python.org)
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Node.js (https://nodejs.org)
-# Dependencies
+# Node.js
 node_modules/
 package-lock.json
 yarn.lock
 
-# Angular (https://angular.io)
-# Compiled output
-/dist/
-/tmp/
-/out-tsc/
+# Angular
+.angular/
+dist/
+tmp/
+out-tsc/
 
-# Bower (https://bower.io)
-# Dependencies
-/bower_components/
+# Bower
+bower_components/
+
+# Testing
+/coverage/
